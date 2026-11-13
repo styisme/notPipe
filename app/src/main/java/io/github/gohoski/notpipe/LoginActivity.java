@@ -1,5 +1,7 @@
 package io.github.gohoski.notpipe;
 
+
+import com.styisme.uikit.UikitRadioButton;
 import android.app.Activity;
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -10,7 +12,6 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ProgressBar;
-import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -33,8 +34,8 @@ public class LoginActivity extends Activity {
     private LinearLayout stageSelect;
     private LinearLayout stageCode;
     private RadioGroup authBackendGroup;
-    private RadioButton radioYtfixer;
-    private RadioButton radioYt2009;
+    private UikitRadioButton radioYtfixer;
+    private UikitRadioButton radioYt2009;
     private LinearLayout instanceContainer;
     private EditText instanceUrlEdit;
     private Button btnStartAuth;
@@ -76,8 +77,8 @@ public class LoginActivity extends Activity {
         stageSelect = (LinearLayout) findViewById(R.id.stage_select);
         stageCode = (LinearLayout) findViewById(R.id.stage_code);
         authBackendGroup = (RadioGroup) findViewById(R.id.auth_backend_group);
-        radioYtfixer = (RadioButton) findViewById(R.id.radio_ytfixer);
-        radioYt2009 = (RadioButton) findViewById(R.id.radio_yt2009);
+        radioYtfixer = (UikitRadioButton) findViewById(R.id.radio_ytfixer);
+        radioYt2009 = (UikitRadioButton) findViewById(R.id.radio_yt2009);
         instanceContainer = (LinearLayout) findViewById(R.id.instance_container);
         instanceUrlEdit = (EditText) findViewById(R.id.instance_url);
         btnStartAuth = (Button) findViewById(R.id.btn_start_auth);

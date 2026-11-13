@@ -28,7 +28,7 @@
                 android:paddingBottom="8dp"
                 android:textColor="@android:color/primary_text_dark"/>
 
-            <CheckBox
+            <com.styisme.uikit.UikitCheckBox
                 android:id="@+id/update_chk"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -120,7 +120,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/video_player_desc"/>
 
-            <CheckBox
+            <com.styisme.uikit.UikitCheckBox
                 android:id="@+id/stream_playback_chk"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
@@ -132,7 +132,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/stream_playback_desc"/>
 
-            <CheckBox
+            <com.styisme.uikit.UikitCheckBox
                 android:id="@+id/async_uri_chk"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
@@ -180,7 +180,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/conversion_"/>
 
-            <CheckBox
+            <com.styisme.uikit.UikitCheckBox
                 android:id="@+id/convert_chk"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
@@ -216,7 +216,7 @@
                 android:paddingTop="24dp"
                 android:textColor="@android:color/primary_text_dark"/>
 
-            <CheckBox
+            <com.styisme.uikit.UikitCheckBox
                 android:id="@+id/fullscreen_rotate_chk"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
@@ -249,13 +249,13 @@
                     android:singleLine="true"/>
             </LinearLayout>
 
-            <CheckBox
+            <com.styisme.uikit.UikitCheckBox
                 android:id="@+id/hide_shorts_rec_chk"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/hide_shorts_recommendations"/>
 
-            <CheckBox
+            <com.styisme.uikit.UikitCheckBox
                 android:id="@+id/hide_shorts_subs_chk"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
