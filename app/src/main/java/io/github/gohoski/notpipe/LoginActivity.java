@@ -1,7 +1,7 @@
 package io.github.gohoski.notpipe;
 
 
-import org.uikit.UikitRadioButton;
+import android.widget.RadioButton;
 import android.app.Activity;
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -34,8 +34,8 @@ public class LoginActivity extends Activity {
     private LinearLayout stageSelect;
     private LinearLayout stageCode;
     private RadioGroup authBackendGroup;
-    private UikitRadioButton radioYtfixer;
-    private UikitRadioButton radioYt2009;
+    private RadioButton radioYtfixer;
+    private RadioButton radioYt2009;
     private LinearLayout instanceContainer;
     private EditText instanceUrlEdit;
     private Button btnStartAuth;
@@ -77,8 +77,8 @@ public class LoginActivity extends Activity {
         stageSelect = (LinearLayout) findViewById(R.id.stage_select);
         stageCode = (LinearLayout) findViewById(R.id.stage_code);
         authBackendGroup = (RadioGroup) findViewById(R.id.auth_backend_group);
-        radioYtfixer = (UikitRadioButton) findViewById(R.id.radio_ytfixer);
-        radioYt2009 = (UikitRadioButton) findViewById(R.id.radio_yt2009);
+        radioYtfixer = (RadioButton) findViewById(R.id.radio_ytfixer);
+        radioYt2009 = (RadioButton) findViewById(R.id.radio_yt2009);
         instanceContainer = (LinearLayout) findViewById(R.id.instance_container);
         instanceUrlEdit = (EditText) findViewById(R.id.instance_url);
         btnStartAuth = (Button) findViewById(R.id.btn_start_auth);

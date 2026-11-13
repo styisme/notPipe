@@ -389,43 +389,7 @@ public class MainActivity extends Activity implements InstancesUpdater.OnInstanc
 
             tabHost.setCurrentTab(0);
 
-            TabWidget tabWidget = tabHost.getTabWidget();
-            removeTabStrip(tabWidget);
-            int compactHeight = (int) TypedValue.applyDimension(
-                    TypedValue.COMPLEX_UNIT_DIP, 42f, getResources().getDisplayMetrics());
-            String[] titles = new String[] {
-                    getString(R.string.tab_home),
-                    getString(R.string.tab_subscriptions),
-                    getString(R.string.tab_you)
-            };
-            int[] iconResIds = new int[] { R.drawable.ic_home, R.drawable.ic_subscriptions, R.drawable.ic_user };
-            for (int i = 0; i < tabWidget.getChildCount(); i++) {
-                View tabView = tabWidget.getChildAt(i);
-                tabView.setBackgroundResource(R.drawable.tab_selector);
-                tabView.setPadding(0, 0, 0, 0);
-                if (tabView.getLayoutParams() != null) {
-                    tabView.getLayoutParams().height = compactHeight;
-                }
-                if (tabView instanceof ViewGroup && tabView.findViewById(R.id.tab_icon) == null) {
-                    ViewGroup vg = (ViewGroup) tabView;
-                    vg.removeAllViews();
-                    View customIndicator = createTabIndicator(titles[i], iconResIds[i]);
-                    vg.addView(customIndicator, new LinearLayout.LayoutParams(
-                            ViewGroup.LayoutParams.FILL_PARENT,
-                            ViewGroup.LayoutParams.FILL_PARENT));
-                }
-            }
-            tabHost.setOnTabChangedListener(new TabHost.OnTabChangeListener() {
-                @Override
-                public void onTabChanged(String tabId) {
-                    if ("subscriptions".equals(tabId)) {
-                        loadSubscriptions();
-                    } else if ("you".equals(tabId)) {
-                        loadYouTabData();
                     }
-                }
-            });
-        }
 
         setupSubscriptionsList();
 
