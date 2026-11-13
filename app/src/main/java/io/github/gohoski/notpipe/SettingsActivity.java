@@ -1,8 +1,9 @@
 package io.github.gohoski.notpipe;
 
 
-import io.github.gohoski.notpipe.ui.ModernCheckBox;
+import org.uikit.UikitCheckBox;
 import android.app.Activity;
+import org.uikit.UikitThemePresets;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.Intent;
@@ -27,9 +28,9 @@ import io.github.gohoski.notpipe.util.InstancesUpdater;
  */
 public class SettingsActivity extends Activity implements InstancesUpdater.OnInstancesUpdatedListener {
     private LinearLayout apiInstancesContainer;
-    private ModernCheckBox updateInstancesChk, streamPlaybackChk, convertVideosChk, asyncUriChk;
-    private ModernCheckBox fullscreenRotateChk;
-    private ModernCheckBox hideShortsRecChk, hideShortsSubsChk;
+    private UikitCheckBox updateInstancesChk, streamPlaybackChk, convertVideosChk, asyncUriChk;
+    private UikitCheckBox fullscreenRotateChk;
+    private UikitCheckBox hideShortsRecChk, hideShortsSubsChk;
     private EditText shortLengthEdit;
     private LinearLayout updateInstancesLayout, convertLayout;
     private EditText instancesUrlEdit;
@@ -55,12 +56,12 @@ public class SettingsActivity extends Activity implements InstancesUpdater.OnIns
         config = configManager.getConfig();
 
         apiInstancesContainer = (LinearLayout) findViewById(R.id.apiInstancesContainer);
-        updateInstancesChk = (ModernCheckBox) findViewById(R.id.update_chk);
+        updateInstancesChk = (UikitCheckBox) findViewById(R.id.update_chk);
         updateInstancesLayout = (LinearLayout) findViewById(R.id.update_instances);
         instancesUrlEdit = (EditText) findViewById(R.id.instances_url);
         updateFreqSpinner = (Spinner) findViewById(R.id.update_spinner);
         playerSpinner = (Spinner) findViewById(R.id.player_spinner);
-        streamPlaybackChk = (ModernCheckBox) findViewById(R.id.stream_playback_chk);
+        streamPlaybackChk = (UikitCheckBox) findViewById(R.id.stream_playback_chk);
         qualitySpinner = (Spinner) findViewById(R.id.quality_spinner);
         qualitySpinner.setOnItemSelectedListener(new android.widget.AdapterView.OnItemSelectedListener() {
             @Override
@@ -79,12 +80,12 @@ public class SettingsActivity extends Activity implements InstancesUpdater.OnIns
             }
         });
         codecSpinner = (Spinner) findViewById(R.id.codec_spinner);
-        convertVideosChk = (ModernCheckBox) findViewById(R.id.convert_chk);
+        convertVideosChk = (UikitCheckBox) findViewById(R.id.convert_chk);
         convertLayout = (LinearLayout) findViewById(R.id.codec_layout);
-        asyncUriChk = (ModernCheckBox) findViewById(R.id.async_uri_chk);
-        fullscreenRotateChk = (ModernCheckBox) findViewById(R.id.fullscreen_rotate_chk);
-        hideShortsRecChk = (ModernCheckBox) findViewById(R.id.hide_shorts_rec_chk);
-        hideShortsSubsChk = (ModernCheckBox) findViewById(R.id.hide_shorts_subs_chk);
+        asyncUriChk = (UikitCheckBox) findViewById(R.id.async_uri_chk);
+        fullscreenRotateChk = (UikitCheckBox) findViewById(R.id.fullscreen_rotate_chk);
+        hideShortsRecChk = (UikitCheckBox) findViewById(R.id.hide_shorts_rec_chk);
+        hideShortsSubsChk = (UikitCheckBox) findViewById(R.id.hide_shorts_subs_chk);
         shortLengthEdit = (EditText) findViewById(R.id.short_length_edit);
 
         hideShortsRecChk.setChecked(config.isHideShortsRecommendations());
@@ -160,6 +161,35 @@ public class SettingsActivity extends Activity implements InstancesUpdater.OnIns
         apiInstancesContainer.addView(typetypeSection);
         apiInstancesContainer.addView(ytApiLegacySection);
 
+        
+        // ===== 注入 MD3 主题预设切换 =====
+        findViewById(R.id.codec_layout).setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View v) {
+                final String[] colors = {"Green", "Blue", "Red", "Purple", "Yellow", "Orange", "Teal"};
+                new AlertDialog.Builder(context)
+                    .setTitle("选择主题预设颜色")
+                    .setItems(colors, new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+                            int color;
+                            switch (which) {
+                                case 0: color = UikitThemePresets.GREEN; break;
+                                case 1: color = UikitThemePresets.BLUE; break;
+                                case 2: color = UikitThemePresets.RED; break;
+                                case 3: color = UikitThemePresets.PURPLE; break;
+                                case 4: color = UikitThemePresets.YELLOW; break;
+                                case 5: color = UikitThemePresets.ORANGE; break;
+                                default: color = UikitThemePresets.TEAL; break;
+                            }
+                            UikitThemePresets.applyPreset(context, color);
+                            recreate(); // 重启 Activity 应用颜色
+                        }
+                    }).show();
+                return true;
+            }
+        });
+        
         findViewById(R.id.cancel).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
