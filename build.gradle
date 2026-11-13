@@ -1,6 +1,7 @@
 // Top-level build file
 buildscript {
     repositories {
+        maven { url 'https://jitpack.io' }
         google()
         maven { url "https://gohoski.github.io/android-legacy-maven/" }
         mavenCentral()
@@ -13,6 +14,7 @@ buildscript {
 
 allprojects {
     repositories {
+        maven { url 'https://jitpack.io' }
         google()
         maven { url "https://gohoski.github.io/android-legacy-maven/" }
         mavenCentral()
