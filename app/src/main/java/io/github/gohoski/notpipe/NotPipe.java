@@ -24,6 +24,7 @@ public class NotPipe extends Application {
         // Let's initialize our one-time stuffs here :3
         // Initialize ConfigManager first (Manager depends on it)
         ConfigManager.init(this);
+        org.uikit.UikitConfig.init("notPipe_uikit");
         ConfigManager.getInstance().ensureInstancesConfigured();
         AuthManager.init(this);
         Manager.init();

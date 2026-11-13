@@ -47,12 +47,7 @@
                     tools:paddingRight="24dp"/>
 
                 <!-- Floats transparently on top of the list in the center -->
-                <ProgressBar
-                    android:id="@+id/loading"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    tools:visibility="gone"/>
+                <org.uikit.UikitLoadingView android:id="@+id/loading" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_gravity="center" />
 
                 <LinearLayout
                     android:id="@+id/no_popular"

@@ -40,6 +40,7 @@
                 android:orientation="vertical">
                 <EditText
                     android:id="@+id/instances_url"
+                    android:background="@drawable/modern_input_bg"
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
                     android:hint="@string/instances_url_hint"
@@ -73,8 +74,7 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"/>
 
-                    <Button
-                        android:id="@+id/update_btn"
+                    <org.uikit.UikitButton android:id="@+id/update_btn"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/update"
@@ -243,6 +243,7 @@
                     android:text="@string/hide_shorts_length"/>
                 <EditText
                     android:id="@+id/short_length_edit"
+                    android:background="@drawable/modern_input_bg"
                     android:layout_width="80dp"
                     android:layout_height="wrap_content"
                     android:inputType="number"
@@ -271,20 +272,27 @@
     </ScrollView>
 
     <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content">
-        
-        <Button
-            android:id="@+id/cancel"
-            android:layout_width="wrap_content"
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:text="@android:string/cancel"/>
+            android:padding="16dp"
+            android:gravity="center"
+            android:background="#121212">
             
-        <Button
-            android:id="@+id/ok"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@android:string/ok"/>
-    </LinearLayout>
+            <org.uikit.UikitButton
+                android:id="@+id/cancel"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="48dp"
+                android:layout_marginRight="8dp"
+                android:text="@android:string/cancel"/>
+                
+            <org.uikit.UikitButton
+                android:id="@+id/ok"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="48dp"
+                android:layout_marginLeft="8dp"
+                android:text="@android:string/ok"/>
+        </LinearLayout>
 </LinearLayout>

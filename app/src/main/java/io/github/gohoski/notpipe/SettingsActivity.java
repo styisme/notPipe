@@ -50,6 +50,7 @@ public class SettingsActivity extends Activity implements InstancesUpdater.OnIns
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        org.uikit.UikitTheme.applyTheme(this);
         setContentView(R.layout.activity_settings);
 
         context = this;
