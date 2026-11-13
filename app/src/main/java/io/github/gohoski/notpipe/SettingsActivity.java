@@ -1,7 +1,7 @@
 package io.github.gohoski.notpipe;
 
 
-import com.styisme.uikit.UikitCheckBox;
+import org.uikit.UikitCheckBox;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.Context;

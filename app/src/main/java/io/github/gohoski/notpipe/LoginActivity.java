@@ -1,7 +1,7 @@
 package io.github.gohoski.notpipe;
 
 
-import com.styisme.uikit.UikitRadioButton;
+import org.uikit.UikitRadioButton;
 import android.app.Activity;
 import android.os.AsyncTask;
 import android.os.Bundle;
