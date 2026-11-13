@@ -27,4 +27,5 @@ android {
 
 dependencies {
     implementation 'com.github.styisme:wear-uikit:v1.6.0'
+
 }
