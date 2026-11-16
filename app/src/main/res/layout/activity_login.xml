@@ -87,16 +87,18 @@
                     android:textColor="#FFFFFF"
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
-                    android:singleLine="true" />
+                    android:singleLine="true"
+                />
             </LinearLayout>
 
             <org.uikit.UikitCompatButton
-                android:id="@+id/btn_start_auth"
-                android:textColor="#FFFFFF"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:text="@string/auth_start" />
+                    android:id="@+id/btn_start_auth"
+                    android:textColor="#FFFFFF"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="@string/auth_start"
+                />
         </LinearLayout>
 
         <LinearLayout
@@ -147,11 +149,12 @@
                 android:padding="8dp" />
 
             <Button
-                android:id="@+id/btn_check_status"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:text="@string/auth_check_status" />
+                    android:id="@+id/btn_check_status"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="@string/auth_check_status"
+                />
         </LinearLayout>
 
         <ProgressBar

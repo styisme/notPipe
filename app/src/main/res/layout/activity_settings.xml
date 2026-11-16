@@ -41,13 +41,13 @@
                 <EditText
                     android:id="@+id/instances_url"
                     android:textColor="#FFFFFF"
-                    android:textColor="#FFFFFF"
                     android:background="@drawable/modern_input_bg"
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
                     android:hint="@string/instances_url_hint"
                     android:inputType="textUri"
-                    android:singleLine="true"/>
+                    android:singleLine="true"
+                />
 
                 <LinearLayout
                     android:layout_width="fill_parent"
@@ -76,12 +76,14 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"/>
 
-                    <org.uikit.UikitCompatButton android:id="@+id/update_btn"
-                        android:textColor="#FFFFFF"
-                        android:layout_width="wrap_content"
-                        android:layout_height="48dp"
-                        android:text="@string/update"
-                        android:layout_gravity="center_vertical"/>
+                    <org.uikit.UikitCompatButton
+                    android:id="@+id/update_btn"
+                    android:textColor="#FFFFFF"
+                    android:layout_width="wrap_content"
+                    android:layout_height="48dp"
+                    android:text="@string/update"
+                    android:layout_gravity="center_vertical"
+                />
                 </LinearLayout>
             </LinearLayout>
 
@@ -247,13 +249,13 @@
                 <EditText
                     android:id="@+id/short_length_edit"
                     android:textColor="#FFFFFF"
-                    android:textColor="#FFFFFF"
                     android:paddingLeft="12dp"
                     android:background="@drawable/modern_input_bg"
                     android:layout_width="80dp"
                     android:layout_height="wrap_content"
                     android:inputType="number"
-                    android:singleLine="true"/>
+                    android:singleLine="true"
+                />
             </LinearLayout>
 
             <io.github.gohoski.notpipe.ui.ModernCheckBox
@@ -286,19 +288,21 @@
             android:background="#121212">
             
             <org.uikit.UikitCompatButton
-                android:id="@+id/cancel"
-                android:layout_width="0dp"
-                android:layout_weight="1"
-                android:layout_height="48dp"
-                android:layout_marginRight="8dp"
-                android:text="@android:string/cancel"/>
+                    android:id="@+id/cancel"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="48dp"
+                    android:layout_marginRight="8dp"
+                    android:text="@android:string/cancel"
+                />
                 
             <org.uikit.UikitCompatButton
-                android:id="@+id/ok"
-                android:layout_width="0dp"
-                android:layout_weight="1"
-                android:layout_height="48dp"
-                android:layout_marginLeft="8dp"
-                android:text="@android:string/ok"/>
+                    android:id="@+id/ok"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="48dp"
+                    android:layout_marginLeft="8dp"
+                    android:text="@android:string/ok"
+                />
         </LinearLayout>
 </LinearLayout>

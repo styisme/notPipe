@@ -229,17 +229,19 @@
                         </LinearLayout>
 
                         <Button
-                            android:id="@+id/btn_me_logout"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="@string/logout" />
+                    android:id="@+id/btn_me_logout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/logout"
+                />
                     </LinearLayout>
 
                     <Button
-                        android:id="@+id/btn_me_login"
-                        android:layout_width="fill_parent"
-                        android:layout_height="wrap_content"
-                        android:text="@string/login" />
+                    android:id="@+id/btn_me_login"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/login"
+                />
 
                     <TextView
                         android:id="@+id/me_history_title"
