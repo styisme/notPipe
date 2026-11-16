@@ -25,6 +25,7 @@ public class NotPipe extends Application {
         // Initialize ConfigManager first (Manager depends on it)
         ConfigManager.init(this);
         org.uikit.UikitConfig.init("notPipe_uikit");
+        if (SDK < 14) { org.uikit.UikitConfig.setLowPerf(this, true); }
         ConfigManager.getInstance().ensureInstancesConfigured();
         AuthManager.init(this);
         Manager.init();

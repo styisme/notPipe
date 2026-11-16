@@ -185,7 +185,8 @@ public class SettingsActivity extends Activity implements InstancesUpdater.OnIns
                                 default: color = UikitThemePresets.TEAL; break;
                             }
                             UikitThemePresets.applyPreset(context, color);
-                            recreate(); // 重启 Activity 应用颜色
+                            // 延迟一点再重建，避免旧设备动画未结束就销毁导致崩溃
+                            new android.os.Handler().postDelayed(new Runnable() { public void run() { recreate(); } }, 300);
                         }
                     }).show();
                 return true;

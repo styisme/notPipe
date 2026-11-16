@@ -389,9 +389,28 @@ public class MainActivity extends Activity implements InstancesUpdater.OnInstanc
 
             tabHost.setCurrentTab(0);
 
-                    }
+            TabWidget tabWidget = tabHost.getTabWidget();
+            if (tabWidget != null) {
+                // 简单清理底部条，不涉及容易崩溃的遍历
+                try {
+                    java.lang.reflect.Method setStripEnabled = tabWidget.getClass().getMethod("setStripEnabled", boolean.class);
+                    setStripEnabled.invoke(tabWidget, false);
+                } catch (Exception ignored) {}
+            }
 
-        setupSubscriptionsList();
+            tabHost.setOnTabChangedListener(new TabHost.OnTabChangeListener() {
+                @Override
+                public void onTabChanged(String tabId) {
+                    if ("subscriptions".equals(tabId)) {
+                        loadSubscriptions();
+                    } else if ("you".equals(tabId)) {
+                        loadYouTabData();
+                    }
+                }
+            });
+        }
+
+        
 
         meStatus = (TextView) findViewById(R.id.me_status);
         meChannelRow = findViewById(R.id.me_channel_row);
