@@ -410,7 +410,8 @@ public class MainActivity extends Activity implements InstancesUpdater.OnInstanc
             });
         }
 
-        
+                setupSubscriptionsList();
+
 
         meStatus = (TextView) findViewById(R.id.me_status);
         meChannelRow = findViewById(R.id.me_channel_row);
