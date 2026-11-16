@@ -84,7 +84,7 @@
                 <EditText
                     android:id="@+id/instance_url"
                     android:background="@drawable/modern_input_bg"
-                    android:textColor="#FFFFFF"
+                    android:textColor="#333333"
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
                     android:singleLine="true"
@@ -93,7 +93,7 @@
 
             <org.uikit.UikitCompatButton
                     android:id="@+id/btn_start_auth"
-                    android:textColor="#FFFFFF"
+                    android:textColor="#333333"
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="16dp"

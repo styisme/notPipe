@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <style name="AppTheme" parent="@android:style/Theme.DeviceDefault">
-        <!-- 隐藏那条该死的蓝色/白色分割线 -->
-        <item name="android:windowContentOverlay">@null</item>
-        <item name="android:colorPrimary">#121212</item>
-        <item name="android:colorPrimaryDark">#121212</item>
+    <style name="AppTheme" parent="@android:style/Theme.Light.NoTitleBar">
+        <item name="android:windowBackground">@android:color/white</item>
+        <item name="android:colorPrimary">#FFFFFF</item>
+        <item name="android:colorPrimaryDark">#FFFFFF</item>
         <item name="android:colorAccent">#388E3C</item>
-        <item name="android:windowBackground">#121212</item>
+        <item name="android:windowContentOverlay">@null</item>
     </style>
 </resources>

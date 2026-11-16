@@ -40,7 +40,7 @@
                 android:orientation="vertical">
                 <EditText
                     android:id="@+id/instances_url"
-                    android:textColor="#FFFFFF"
+                    android:textColor="#333333"
                     android:background="@drawable/modern_input_bg"
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
@@ -78,7 +78,7 @@
 
                     <org.uikit.UikitCompatButton
                     android:id="@+id/update_btn"
-                    android:textColor="#FFFFFF"
+                    android:textColor="#333333"
                     android:layout_width="wrap_content"
                     android:layout_height="48dp"
                     android:text="@string/update"
@@ -248,7 +248,7 @@
                     android:text="@string/hide_shorts_length"/>
                 <EditText
                     android:id="@+id/short_length_edit"
-                    android:textColor="#FFFFFF"
+                    android:textColor="#333333"
                     android:paddingLeft="12dp"
                     android:background="@drawable/modern_input_bg"
                     android:layout_width="80dp"
@@ -285,7 +285,7 @@
             android:layout_height="wrap_content"
             android:padding="16dp"
             android:gravity="center"
-            android:background="#121212">
+            android:background="#FFFFFF">
             
             <org.uikit.UikitCompatButton
                     android:id="@+id/cancel"
