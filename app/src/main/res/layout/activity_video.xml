@@ -166,25 +166,28 @@
                     android:orientation="horizontal"
                     android:paddingLeft="16dp"
                     android:paddingRight="16dp">
-                    <org.uikit.UikitCompatButton android:id="@+id/like"
+                    <org.uikit.UikitCompatButton
+                        android:id="@+id/like"
                         android:layout_width="wrap_content"
                         android:layout_height="fill_parent"
-                        android:drawableLeft="@drawable/ic_like"
-                        android:textSize="16sp"
+                        android:layout_marginRight="8dp"
                         android:text="@string/like"
-                        tools:text="1356"/>
+                        android:textColor="#FFFFFF" />
 
-                    <org.uikit.UikitCompatButton android:id="@+id/dislike"
+                    <org.uikit.UikitCompatButton
+                        android:id="@+id/dislike"
                         android:layout_width="wrap_content"
                         android:layout_height="fill_parent"
-                        android:src="@drawable/ic_dislike"/>
+                        android:layout_marginRight="8dp"
+                        android:text="踩"
+                        android:textColor="#FFFFFF" />
 
-                    <org.uikit.UikitCompatButton android:id="@+id/share"
+                    <org.uikit.UikitCompatButton
+                        android:id="@+id/share"
                         android:layout_width="wrap_content"
                         android:layout_height="fill_parent"
-                        android:drawableLeft="@drawable/ic_share"
                         android:text="@string/share"
-                        android:singleLine="true"/>
+                        android:textColor="#FFFFFF" />
                 </LinearLayout>
 
                 <TextView

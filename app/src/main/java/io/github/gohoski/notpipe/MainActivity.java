@@ -185,6 +185,7 @@ public class MainActivity extends Activity implements InstancesUpdater.OnInstanc
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        org.uikit.UikitTheme.applyTheme(this);
         setContentView(R.layout.activity_main);
 
         listView = (AbsListView) findViewById(R.id.videos);

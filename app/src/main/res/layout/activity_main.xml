@@ -228,20 +228,20 @@
                                 android:layout_gravity="center" />
                         </LinearLayout>
 
-                        <Button
-                    android:id="@+id/btn_me_logout"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/logout"
-                />
+                        <org.uikit.UikitCompatButton
+                            android:id="@+id/btn_me_logout"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/logout"
+                            android:textColor="#FFFFFF" />
                     </LinearLayout>
 
-                    <Button
-                    android:id="@+id/btn_me_login"
-                    android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@string/login"
-                />
+                    <org.uikit.UikitCompatButton
+                        android:id="@+id/btn_me_login"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/login"
+                        android:textColor="#FFFFFF" />
 
                     <TextView
                         android:id="@+id/me_history_title"

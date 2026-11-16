@@ -170,6 +170,7 @@ public class VideoActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        org.uikit.UikitTheme.applyTheme(this);
         setContentView(R.layout.activity_video);
 
         api = Manager.getInstance().getMetadata();
