@@ -195,6 +195,14 @@ public class VideoActivity extends Activity {
         setupViewReferences();
         setupAdapters();
         setupTabHost();
+        // 极致防崩的 Tab 隐藏底部线条
+        TabWidget tw = (TabWidget) findViewById(android.R.id.tabs);
+        if (tw != null) {
+            try {
+                java.lang.reflect.Method setStripEnabled = tw.getClass().getMethod("setStripEnabled", boolean.class);
+                setStripEnabled.invoke(tw, false);
+            } catch (Exception ignored) {}
+        }
         // Hide the tabs panel initially so we don't start loading tabs before the main video loads
         View tabHost = findViewById(android.R.id.tabhost);
         if (tabHost != null) {

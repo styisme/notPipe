@@ -166,8 +166,7 @@
                     android:orientation="horizontal"
                     android:paddingLeft="16dp"
                     android:paddingRight="16dp">
-                    <Button
-                        android:id="@+id/like"
+                    <org.uikit.UikitCompatButton android:id="@+id/like"
                         android:layout_width="wrap_content"
                         android:layout_height="fill_parent"
                         android:drawableLeft="@drawable/ic_like"
@@ -175,14 +174,12 @@
                         android:text="@string/like"
                         tools:text="1356"/>
 
-                    <ImageButton
-                        android:id="@+id/dislike"
+                    <org.uikit.UikitCompatButton android:id="@+id/dislike"
                         android:layout_width="wrap_content"
                         android:layout_height="fill_parent"
                         android:src="@drawable/ic_dislike"/>
 
-                    <Button
-                        android:id="@+id/share"
+                    <org.uikit.UikitCompatButton android:id="@+id/share"
                         android:layout_width="wrap_content"
                         android:layout_height="fill_parent"
                         android:drawableLeft="@drawable/ic_share"
@@ -213,8 +210,7 @@
                             android:id="@android:id/tabs"
                             android:layout_width="fill_parent"
                             android:layout_height="wrap_content"
-                            android:paddingLeft="16dp"
-                            android:paddingRight="16dp">
+                            >
                         </TabWidget>
                         <FrameLayout
                             android:id="@android:id/tabcontent"
