@@ -1,7 +1,7 @@
 package io.github.gohoski.notpipe;
 
 
-import org.uikit.UikitCompatCheckBox;
+import io.github.gohoski.notpipe.ui.ModernCheckBox;
 import android.app.Activity;
 import org.uikit.UikitThemePresets;
 import android.app.AlertDialog;
@@ -29,9 +29,9 @@ import io.github.gohoski.notpipe.util.InstancesUpdater;
  */
 public class SettingsActivity extends Activity implements InstancesUpdater.OnInstancesUpdatedListener {
     private LinearLayout apiInstancesContainer;
-    private UikitCompatCheckBox updateInstancesChk, streamPlaybackChk, convertVideosChk, asyncUriChk;
-    private UikitCompatCheckBox fullscreenRotateChk;
-    private UikitCompatCheckBox hideShortsRecChk, hideShortsSubsChk;
+    private ModernCheckBox updateInstancesChk, streamPlaybackChk, convertVideosChk, asyncUriChk;
+    private ModernCheckBox fullscreenRotateChk;
+    private ModernCheckBox hideShortsRecChk, hideShortsSubsChk;
     private EditText shortLengthEdit;
     private LinearLayout updateInstancesLayout, convertLayout;
     private EditText instancesUrlEdit;
@@ -58,12 +58,12 @@ public class SettingsActivity extends Activity implements InstancesUpdater.OnIns
         config = configManager.getConfig();
 
         apiInstancesContainer = (LinearLayout) findViewById(R.id.apiInstancesContainer);
-        updateInstancesChk = (UikitCompatCheckBox) findViewById(R.id.update_chk);
+        updateInstancesChk = (ModernCheckBox) findViewById(R.id.update_chk);
         updateInstancesLayout = (LinearLayout) findViewById(R.id.update_instances);
         instancesUrlEdit = (EditText) findViewById(R.id.instances_url);
         updateFreqSpinner = (Spinner) findViewById(R.id.update_spinner);
         playerSpinner = (Spinner) findViewById(R.id.player_spinner);
-        streamPlaybackChk = (UikitCompatCheckBox) findViewById(R.id.stream_playback_chk);
+        streamPlaybackChk = (ModernCheckBox) findViewById(R.id.stream_playback_chk);
         qualitySpinner = (Spinner) findViewById(R.id.quality_spinner);
         qualitySpinner.setOnItemSelectedListener(new android.widget.AdapterView.OnItemSelectedListener() {
             @Override
@@ -82,12 +82,12 @@ public class SettingsActivity extends Activity implements InstancesUpdater.OnIns
             }
         });
         codecSpinner = (Spinner) findViewById(R.id.codec_spinner);
-        convertVideosChk = (UikitCompatCheckBox) findViewById(R.id.convert_chk);
+        convertVideosChk = (ModernCheckBox) findViewById(R.id.convert_chk);
         convertLayout = (LinearLayout) findViewById(R.id.codec_layout);
-        asyncUriChk = (UikitCompatCheckBox) findViewById(R.id.async_uri_chk);
-        fullscreenRotateChk = (UikitCompatCheckBox) findViewById(R.id.fullscreen_rotate_chk);
-        hideShortsRecChk = (UikitCompatCheckBox) findViewById(R.id.hide_shorts_rec_chk);
-        hideShortsSubsChk = (UikitCompatCheckBox) findViewById(R.id.hide_shorts_subs_chk);
+        asyncUriChk = (ModernCheckBox) findViewById(R.id.async_uri_chk);
+        fullscreenRotateChk = (ModernCheckBox) findViewById(R.id.fullscreen_rotate_chk);
+        hideShortsRecChk = (ModernCheckBox) findViewById(R.id.hide_shorts_rec_chk);
+        hideShortsSubsChk = (ModernCheckBox) findViewById(R.id.hide_shorts_subs_chk);
         shortLengthEdit = (EditText) findViewById(R.id.short_length_edit);
 
         hideShortsRecChk.setChecked(config.isHideShortsRecommendations());
