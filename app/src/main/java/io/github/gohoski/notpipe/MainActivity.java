@@ -16,6 +16,7 @@ import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.Window;
 import android.view.ViewGroup;
 import android.view.ViewParent;
 import android.view.inputmethod.EditorInfo;
@@ -184,6 +185,7 @@ public class MainActivity extends Activity implements InstancesUpdater.OnInstanc
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
@@ -402,6 +404,25 @@ public class MainActivity extends Activity implements InstancesUpdater.OnInstanc
 
             TabWidget tabWidget = tabHost.getTabWidget();
             removeTabStrip(tabWidget);
+            
+            // ===== 安全注入的纯白美化逻辑 =====
+            if (tabWidget != null) {
+                tabWidget.setBackgroundColor(0xFFFFFFFF);
+                for (int i = 0; i < tabWidget.getChildCount(); i++) {
+                    View tabView = tabWidget.getChildAt(i);
+                    tabView.setBackgroundColor(0xFFFFFFFF);
+                    if (tabView instanceof android.view.ViewGroup) {
+                        android.view.ViewGroup vg = (android.view.ViewGroup) tabView;
+                        for (int j = 0; j < vg.getChildCount(); j++) {
+                            View child = vg.getChildAt(j);
+                            if (child instanceof android.widget.TextView) {
+                                ((android.widget.TextView) child).setTextColor(0xFF333333);
+                            }
+                        }
+                    }
+                }
+            }
+            // =================================
             int compactHeight = (int) TypedValue.applyDimension(
                     TypedValue.COMPLEX_UNIT_DIP, 42f, getResources().getDisplayMetrics());
             String[] titles = new String[] {

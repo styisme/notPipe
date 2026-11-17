@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<TabHost xmlns:android="http://schemas.android.com/apk/res/android"
+<TabHost android:background="#FFFFFF" xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/tabHost"
     android:layout_width="fill_parent"
@@ -45,7 +45,7 @@
             android:focusable="true"
             android:focusableInTouchMode="true"/>
 
-        <TabWidget
+        <TabWidget android:background="#FFFFFF"
             android:id="@android:id/tabs"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"/>
@@ -183,11 +183,7 @@
                 </FrameLayout>
             </LinearLayout>
 
-            <LinearLayout
-                android:id="@+id/me"
-                android:layout_width="fill_parent"
-                android:layout_height="fill_parent"
-                android:orientation="vertical">
+            <LinearLayout android:id="@+id/me" android:background="#FFFFFF" android:layout_width="fill_parent" android:layout_height="fill_parent" android:orientation="vertical">
 
                 <ScrollView
                     android:layout_width="fill_parent"
