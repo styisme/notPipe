@@ -15,19 +15,7 @@
             android:layout_height="wrap_content"
             android:scaleType="centerCrop"
             tools:src="@android:color/white" />
-        <TextView
-            android:id="@+id/duration"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="bottom|right"
-            android:layout_margin="5dip"
-            android:background="#AA000000"
-            android:padding="3dip"
-            android:textColor="#FFFFFF"
-            android:textSize="12sp"
-            android:visibility="gone"
-            tools:visibility="visible"
-            tools:text="00:00"/>
+        <TextView android:id="@+id/duration" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_gravity="bottom|right" android:layout_margin="5dip" android:background="#AA000000" android:padding="3dip" android:textColor="#222222" android:textSize="12sp" android:visibility="gone" tools:visibility="visible" tools:text="00:00" />
     </FrameLayout>
 
     <LinearLayout
@@ -54,13 +42,17 @@
                 android:textStyle="bold"
                 android:maxLines="2"
                 android:ellipsize="end"
-                tools:text="Exampletitle" />
+                tools:text="Exampletitle" 
+        android:textColor="#222222"
+        />
             <TextView
                 android:id="@+id/channel_title"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:textSize="12sp"
-                tools:text="Goida · 12M views" />
+                tools:text="Goida · 12M views" 
+        android:textColor="#222222"
+        />
         </LinearLayout>
     </LinearLayout>
 </LinearLayout>

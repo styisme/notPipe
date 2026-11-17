@@ -23,16 +23,7 @@
             <TableRow
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content">
-                <TextView
-                    android:id="@+id/channel_title"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:singleLine="true"
-                    android:ellipsize="end"
-                    android:textStyle="bold"
-                    android:textSize="12sp"
-                    android:textColor="@android:color/primary_text_dark"
-                    tools:text="\@sigma" />
+                <TextView android:id="@+id/channel_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" android:ellipsize="end" android:textStyle="bold" android:textSize="12sp" android:textColor="#333333" tools:text="\@sigma" />
                 <TextView
                     android:id="@+id/date"
                     android:layout_width="wrap_content"
@@ -40,7 +31,9 @@
                     android:singleLine="true"
                     android:textSize="12sp"
                     android:paddingLeft="5dip"
-                    tools:text="1 year ago" />
+                    tools:text="1 year ago" 
+        android:textColor="#333333"
+        />
             </TableRow>
         </TableLayout>
         <TextView
@@ -48,6 +41,8 @@
             android:layout_width="fill_parent"
             android:layout_height="0dp"
             android:layout_weight="1"
-            tools:text="Наше дело не так однозначно, как может показаться: разбавленное изрядной долей эмпатии, рациональное мышление представляет собой интересный эксперимент проверки соответствующих условий активизации."/>
+            tools:text="Наше дело не так однозначно, как может показаться: разбавленное изрядной долей эмпатии, рациональное мышление представляет собой интересный эксперимент проверки соответствующих условий активизации."
+        android:textColor="#333333"
+        />
     </LinearLayout>
 </LinearLayout>
