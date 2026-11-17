@@ -26,7 +26,7 @@
                 android:textStyle="bold"
                 android:textSize="20sp"
                 android:paddingBottom="8dp"
-                android:textColor="@android:color/primary_text_dark"/>
+                android:textColor="#333333"/>
 
             <io.github.gohoski.notpipe.ui.ModernCheckBox
                 android:id="@+id/update_chk"
@@ -100,7 +100,7 @@
                 android:textStyle="bold"
                 android:textSize="20sp"
                 android:paddingTop="24dp"
-                android:textColor="@android:color/primary_text_dark"/>
+                android:textColor="#333333"/>
 
             <LinearLayout
                 android:layout_width="fill_parent"
@@ -178,7 +178,7 @@
                 android:textStyle="bold"
                 android:textSize="20sp"
                 android:paddingTop="24dp"
-                android:textColor="@android:color/primary_text_dark"/>
+                android:textColor="#333333"/>
 
             <TextView
                 android:layout_width="fill_parent"
@@ -219,7 +219,7 @@
                 android:textStyle="bold"
                 android:textSize="20sp"
                 android:paddingTop="24dp"
-                android:textColor="@android:color/primary_text_dark"/>
+                android:textColor="#333333"/>
 
             <io.github.gohoski.notpipe.ui.ModernCheckBox
                 android:id="@+id/fullscreen_rotate_chk"
@@ -234,7 +234,7 @@
                 android:textStyle="bold"
                 android:textSize="20sp"
                 android:paddingTop="24dp"
-                android:textColor="@android:color/primary_text_dark"/>
+                android:textColor="#333333"/>
 
             <LinearLayout
                 android:layout_width="fill_parent"
