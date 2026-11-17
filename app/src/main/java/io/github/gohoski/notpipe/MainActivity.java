@@ -185,7 +185,15 @@ public class MainActivity extends Activity implements InstancesUpdater.OnInstanc
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        requestWindowFeature(Window.FEATURE_NO_TITLE);
+        
+        if (NotPipe.SDK >= 21) {
+            setTheme(android.R.style.Theme_Material_Light_NoActionBar);
+        } else if (NotPipe.SDK >= 11) {
+            setTheme(android.R.style.Theme_Holo_Light_NoActionBar);
+        } else {
+            setTheme(android.R.style.Theme_Light_NoTitleBar);
+        }
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
@@ -385,6 +393,32 @@ public class MainActivity extends Activity implements InstancesUpdater.OnInstanc
         if (tabHost != null) {
             tabHost.setup();
 
+            // 极简防崩 Tab 样式修正
+            TabWidget tw = tabHost.getTabWidget();
+            if (tw != null) {
+                tw.setBackgroundColor(0xFFFFFFFF);
+                try {
+                    java.lang.reflect.Method setStripEnabled = tw.getClass().getMethod("setStripEnabled", boolean.class);
+                    setStripEnabled.invoke(tw, false);
+                } catch (Exception ignored) {}
+                for (int i = 0; i < tw.getChildCount(); i++) {
+                    android.view.View child = tw.getChildAt(i);
+                    child.setBackgroundColor(0xFFFFFFFF);
+                    // 强制把子 View 的背景也变白
+                    if (child instanceof android.view.ViewGroup) {
+                        android.view.ViewGroup vg = (android.view.ViewGroup) child;
+                        vg.setBackgroundColor(0xFFFFFFFF);
+                        for (int j = 0; j < vg.getChildCount(); j++) {
+                            android.view.View sub = vg.getChildAt(j);
+                            if (sub instanceof android.widget.TextView) {
+                                ((android.widget.TextView) sub).setTextColor(0xFF333333);
+                            }
+                        }
+                    }
+                }
+            }
+
+
             TabHost.TabSpec tabSpec = tabHost.newTabSpec("home");
             tabSpec.setContent(R.id.home);
             safeSetIndicator(tabSpec, getString(R.string.tab_home), R.drawable.ic_home);
@@ -537,6 +571,11 @@ public class MainActivity extends Activity implements InstancesUpdater.OnInstanc
 
         if (iconResId != 0) {
             icon.setImageResource(iconResId);
+        if (NotPipe.SDK >= 21) {
+            icon.setImageTintList(android.content.res.ColorStateList.valueOf(0xFF666666));
+        } else {
+            icon.setColorFilter(0xFF666666);
+        }
             icon.setVisibility(View.VISIBLE);
         } else {
             icon.setVisibility(View.GONE);

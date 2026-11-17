@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layer-list xmlns:android="http://schemas.android.com/apk/res/android">
-    <!-- Base background -->
+    <!-- 纯白主背景 -->
     <item>
         <shape android:shape="rectangle">
-            <solid android:color="#000" />
+            <solid android:color="#FFFFFF" />
         </shape>
     </item>
-    <!-- Bottom Accent Line (3dp tall) -->
+    <!-- 底部绿色的选中线条 -->
     <item android:top="-3dp" android:left="-3dp" android:right="-3dp">
         <shape android:shape="rectangle">
             <stroke
                 android:width="2dp"
-                android:color="#CC181E" /> <!-- Or #33B5E5 (Holo Blue) / #CC181E (YouTube Red) -->
+                android:color="#388E3C" /> <!-- 搭配你的主题绿 -->
         </shape>
     </item>
 </layer-list>
